@@ -3,5 +3,5 @@ services:
     name: TucanaLive
     env: node
     plan: free
-    buildCommand: npm install
+    buildCommand: ./render-build.sh
     startCommand: node index.js
