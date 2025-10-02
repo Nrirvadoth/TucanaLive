@@ -157,5 +157,17 @@ client.once('ready', async () => {
   scheduleHourlyTask(() => postMilitaryRanking(channel));
 });
 
+// --- Serveur HTTP minimal pour keep-alive ---
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end('OK');
+});
+
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, () => {
+  console.log(`Serveur HTTP keep-alive lancé sur le port ${PORT}`);
+});
 
 client.login(TOKEN);
