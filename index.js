@@ -2,6 +2,7 @@ require('dotenv').config();
 const { Client, GatewayIntentBits, Partials } = require('discord.js');
 const http = require('http');
 const puppeteer = require('puppeteer');
+const CHROMIUM_PATH = '/usr/bin/chromium';
 
 const TOKEN = process.env.DISCORD_TOKEN;
 const CHANNEL_ID = process.env.CHANNEL_ID;
@@ -25,7 +26,7 @@ async function fetchMilitaryRankingWithPuppeteer() {
   const browser = await puppeteer.launch({
     headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    executablePath: puppeteer.executablePath(),
+    executablePath: CHROMIUM_PATH,
   });
   const page = await browser.newPage();
 
