@@ -1,5 +1,6 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits, Partials } = require('discord.js');
+const http = require('http');
 const puppeteer = require('puppeteer');
 
 const TOKEN = process.env.DISCORD_TOKEN;
