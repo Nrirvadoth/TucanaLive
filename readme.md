@@ -1,0 +1,1 @@
+Bot discord qui scrappe les infos de MMORPG Tucana MD/ML toutes les heures et le poste dans le chan discord approprié.
