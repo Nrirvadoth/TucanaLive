@@ -3,9 +3,5 @@ services:
     name: TucanaLive
     env: node
     plan: free
-    buildCommand: |
-      apt-get update && apt-get install -y chromium
-      which chromium || which chromium-browser
-      yarn install
-      puppeteer install
+    buildCommand: npm install
     startCommand: node index.js
