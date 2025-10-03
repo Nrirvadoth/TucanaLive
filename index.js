@@ -26,7 +26,7 @@ async function fetchMilitaryRankingWithPuppeteer() {
   const browser = await puppeteer.launch({
     headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    //executablePath: CHROMIUM_PATH,
+    executablePath: './google-chrome-stable'
   });
   const page = await browser.newPage();
 
